@@ -1,0 +1,17 @@
+# KiCad: lock files, local history, backups, per-user view settings
+*.lck
+.history/
+*-backups/
+fp-info-cache
+*.kicad_prl
+_autosave-*
+*.bak
+# Fabrication outputs are rebuilt from KiCad; keep the exact files you ordered in orders/
+gerbers/
+*.zip
+!orders/**/*.zip
+# Sync conflict copies are fine to commit, but Python caches and OS clutter are not
+__pycache__/
+.DS_Store
+Thumbs.db
+desktop.ini
