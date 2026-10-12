@@ -264,6 +264,10 @@ def front_color(v):
     draw_text(img, (x0 + 2.6, ly), "name", F_BODY, 1.5, cfg["ink"] + (255,))
     # city + date line under the plate (on the coloured field)
     draw_dotted_line(img, (cx, CITY_Y), cfg["sub"], F_BODY, 1.55, (255, 255, 255, 255))
+    # no ink on the ENIG hole pad: clear the logo/Daven too, not only the field
+    a = np.array(img.getchannel("A"))
+    a[circle_mask(*HOLE, HOLE_KEEPOUT) > 0] = 0
+    img.putalpha(Image.fromarray(a))
     return img
 
 

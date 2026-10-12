@@ -1,12 +1,12 @@
 G04 #@! TF.GenerationSoftware,KiCad,Pcbnew,10.0.3*
-G04 #@! TF.CreationDate,2026-10-12T16:22:40+05:00*
+G04 #@! TF.CreationDate,2026-10-12T17:25:12+05:00*
 G04 #@! TF.ProjectId,haven-tashkent,68617665-6e2d-4746-9173-686b656e742e,rev?*
 G04 #@! TF.SameCoordinates,Original*
 G04 #@! TF.FileFunction,Soldermask,Top*
 G04 #@! TF.FilePolarity,Negative*
 %FSLAX46Y46*%
 G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
-G04 Created by KiCad (PCBNEW 10.0.3) date 2026-10-12 16:22:40*
+G04 Created by KiCad (PCBNEW 10.0.3) date 2026-10-12 17:25:12*
 %MOMM*%
 %LPD*%
 G01*
@@ -14,7 +14,5 @@ G04 APERTURE LIST*
 %ADD10C,8.600000*%
 G04 APERTURE END LIST*
 D10*
-G04 #@! TO.C,REF\u002A\u002A*
 X127000000Y-106000000D03*
-G04 #@! TD*
 M02*
