@@ -4,6 +4,7 @@ import numpy as np
 import cv2
 from PIL import Image, ImageDraw, ImageFilter
 import design as d
+import sponsor_logo
 from design import px, S, W, H, CW, CH, HOLE, PAD, DRILL, F_HEAD, F_BODY
 
 OUT = "out"
@@ -94,11 +95,8 @@ def back_silk(v):
 
     d.draw_text(img, (tx, 47.6), "Hack Club Haven", F_BODY, 1.45, 255)
     d.draw_text(img, (tx, 49.9), "Tashkent, 14-15 Nov 2026", F_BODY, 1.3, 255)
-    # bottom line
-    d.draw_text(img, (cx, 54.2), "haven.hackclub.com/tashkent", F_BODY, 1.35, 255, anchor="ms")
-    d.draw_dotted_line(img, (cx, 56.6), ("PCB made by PCBWay", "designed in KiCad"), F_BODY, 1.25, 255,
-                       gap_mm=1.2, dot_mm=0.45)
-    a = np.array(img)
+    # bottom rows: url + "PCB made by [PCBWay logo]" (PCBWay requires their logo, see sponsor_logo.py)
+    a = sponsor_logo.draw_sponsor_rows(np.array(img))
     # keep silk 0.5 mm inside the board edge and off the pin zone / hole pad
     a &= d.erode(back_outline, 0.6)
     a &= ~zone_mask(0.0)

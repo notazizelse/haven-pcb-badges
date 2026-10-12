@@ -27,4 +27,6 @@ KEY NUMBERS (KiCad coordinates, when the outline is imported at X=100, Y=100)
 4-generator/ .......................... Python scripts that made all of this. To rebuild, put the brand-kit
                                         folders fonts/, logos/, daven-pudding/ next to the scripts and run
                                         python3 layers.py && python3 mockup.py && python3 sheets.py
-                                        (needs numpy, opencv-python, pillow). Layout numbers are at the top of design.py.
+                                        (needs numpy, opencv-python, pillow, scikit-image). Layout numbers are at the top of design.py.
+                                        sponsor_logo.py draws the PCBWay logo row on the back (logo in logos/pcbway-logo.png).
+                                        Run it on its own (python3 sponsor_logo.py) to update just the two B_SilkS PNGs.
